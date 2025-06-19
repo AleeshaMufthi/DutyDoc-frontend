@@ -19,10 +19,8 @@ const LoginForm = () => {
       setLoading(true);
       const res = await loginUser(email);
       console.log(res, 'response from the login')
-      // You can store email temporarily in localStorage or global state
-      // localStorage.setItem('emailForOtp', email);
 
-      navigate('/otp', { state: { email }}); // Assuming you have an OTP page
+      navigate('/otp', { state: { email }}); 
     } catch (error) {
       alert(error.message);
     } finally {
